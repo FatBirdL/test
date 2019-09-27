@@ -1,1 +1,14 @@
-123456
+用git本地提交代码到远程库的第一次尝试
+流程记录如下：
+首先在桌面新建一个空白文件夹
+然后在文件夹里面右键，选择git bash here
+在弹出的cmd里输入：git init
+然后在该文件夹里添加想要添加到库的文件
+输入git status查看文件状态，会以红色显示有一个文件被追踪到
+然后git add .选择把全部文件提交，注意此处的add与.之间有空格，代表添加全部的文件，也可以用git add --all来实现
+再次输入git status查看 就能看到文件名变为绿色，表示已经被添加
+输入命令git commit -m"shuoming"对此次的操作做出说明
+如果系统提示要验证身份，则输入git config --global user.email "youxiang"回车继续输入git config --global user.name "名字"注意这里的双引号之前是有空格的
+然后输入命令 git remote add origin 后面接github库的网址
+然后输入命令 git push origin master
+进入github相应的库刷新就可以看到此次的添加内容
